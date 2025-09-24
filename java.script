@@ -1,0 +1,48 @@
+const toggleBtn = document.getElementById("toggle-btn");
+const toggleText = toggleBtn.querySelector(".toggle-text");
+const toggleIcon = toggleBtn.querySelector(".toggle-icon");
+const logoImg = document.getElementById("logo-img");
+const logoText = document.getElementById("logo-text");
+
+function setTheme(mode) {
+    if (mode === "dark") {
+        document.body.classList.add("dark");
+        toggleBtn.classList.remove("light-mode");
+        toggleBtn.classList.add("dark-mode");
+        toggleText.textContent = "DARK MODE";
+        toggleIcon.textContent = "🌙";
+
+        // Skift logo og tekstfarve
+        logoImg.src = "billeder/ekdark.webp"; 
+        logoText.style.color = "#ffcc00"; // fx gul
+
+        localStorage.setItem("theme", "dark");
+    } else {
+        document.body.classList.remove("dark");
+        toggleBtn.classList.remove("dark-mode");
+        toggleBtn.classList.add("light-mode");
+        toggleText.textContent = "LIGHT MODE";
+        toggleIcon.textContent = "☀";
+
+        // Skift logo og tekstfarve tilbage
+        logoImg.src = "billeder/ek.webp"; 
+        logoText.style.color = "#003366"; // blå
+
+        localStorage.setItem("theme", "light");
+    }
+}
+
+// Klik på toggle knappen
+toggleBtn.addEventListener("click", () => {
+    if (document.body.classList.contains("dark")) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+// Hent gemt tema når siden loader
+window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+}); 
