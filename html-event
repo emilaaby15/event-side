@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar med Dark/Light Toggle</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- LINK TIL CSS -->
+</head>
+<body>
+
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+        <img src="billeder/ek-light.webp" alt="EK logo" id="logo-img">
+        <span id="logo-text">ERHVERVSAKADEMI<br>KØBENHAVN</span>
+      </div>      
+
+    <!-- Links + toggle -->
+    <div class="nav-links">
+      <a href="#">EVENTS</a>
+      <a href="#">KALENDER</a>
+      <a href="#">CHAT</a>
+
+      <!-- Toggle knap -->
+      <div id="toggle-btn" class="toggle-container light-mode">
+        <span class="toggle-text">LIGHT MODE</span>
+        <div class="toggle-icon">☀️</div>
+      </div>
+    </div> <!-- ✅ lukker nav-links -->
+  </nav>
+
+  <header>
+    <h1>Events</h1>
+  </header>
+
+  <!-- Hero billede -->
+  <section class="hero">
+    <img src="img/ascii.webp" alt="ASCII art baggrund">
+    <div class="hero-text">
+      <h2>Ascii art event</h2>
+      <p>Kom til EK´s ascii art event i auditoriet,<br>
+         og vær med til at lave ægte pc kunst</p>
+      <p><strong>17/10 kl 13 i auditoriet</strong></p>
+    </div>
+  </section>
+
+  <!-- Beskrivelsesboks -->
+  <section class="description">
+    <h3>Kom og vær med til en sjov og anderledes workshop, hvor vi dykker ned i den digitale kunstform ASCII art!</h3>
+    <p>Lær hvordan man skaber billeder og mønstre udelukkende med teksttegn</p>
+    <p>Prøv kræfter med både simpel og avanceret ASCII-kunst</p>
+    <p>Udfold din kreativitet – ingen forkundskaber er nødvendige!</p>
+    <p>Vi stiller opgaver, viser eksempler og kårer de mest kreative værker</p>
+    <p>Eventet er åbent for alle studerende på Erhvervsakademi København – tag din laptop med og lad kreativiteten få frit spil med tastaturet!</p>
+  </section>
+
+  <!-- Mindre billede nederst -->
+  <div class="bottom-image">
+    <img src="img/mr-bean.webp" alt="ASCII art eksempel">
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+   
+      <footer>
+        <p></p>
+      </footer>
+
+  <script src="java-script/script.js"></script> <!-- LINK TIL JS -->
+</body>
+</html>
