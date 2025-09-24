@@ -73,3 +73,235 @@
 </body>
 </html>
 
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff3d5;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #fff3d5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.logo span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #003366;
+    line-height: 1.2;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* DARK MODE */
+body.dark {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark .navbar {
+    background-color: #2a2a2a;
+}
+
+body.dark .description {
+    background-color: #2a2a2a; /* mørk baggrund */
+    color: #f1f1f1; /* hvid tekst */
+}
+
+body.dark .description h3,
+body.dark .description p {
+    color: #f1f1f1; /* hvid tekst */
+}
+
+/* TOGGLE BUTTON (mindre version) */
+.toggle-container {
+    width: 120px;
+    height: 35px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 12px;
+}
+
+.toggle-text {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.toggle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+/* LIGHT MODE STYLE */
+.light-mode {
+    background-color: #e6e6e6;
+    color: #000;
+}
+
+/* DARK MODE STYLE */
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+    flex-direction: row-reverse;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Hero sektion */
+/* Hero sektion */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  /* gør at der kommer luft i siderne */
+  max-width: 1400px;   /* du kan ændre til 1100px eller 1000px hvis du vil have mere luft */
+  margin: 0 auto;      /* centrer hero-sektionen */
+  border-radius: 10px; /* afrundede kanter hvis du vil */
+  overflow: hidden;    /* så tekst ikke går ud over kanten */
+}
+
+.hero img {
+  width: 100%;          /* fylder hele bredden af hero-sektionen */
+  height: 600px;        /* gør billedet højere */
+  object-fit: cover;    /* beskær billedet så det fylder pænt */
+  display: block;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Beskrivelsesboks */
+.description {
+  background-color: #e9ebff;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.description h3 {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.description p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Lille billede nederst */
+.bottom-image {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.bottom-image img {
+  max-width: 220px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsivt */
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+footer {
+    height: 200px;
+    background-image: url("billeder/Skærmbillede-2025-09-23-kl.-14.50.56.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+  }
+  
+  /* Dark mode */
+  body.dark footer {
+    background-image: url("billeder/footer-dark.webp");
+    color: #fff;
+  }
